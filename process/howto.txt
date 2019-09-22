@@ -1,0 +1,13 @@
+#1
+copy existing component file ( .vue)
+
+#2
+in App.vue
+
+- import NewFileName from './NewFileName.vue';
+- under components add the new component -> 'new-file-name': NewFileName
+- between template tags add the component <new-file-name></new-file-name>
+
+#3
+Add stuff to the template of the new component !
+done :)

@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800&display=swap");
+
+/**  Basic Page CSS **/
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+  /*everyone! inherits from body*/
+  scroll-behavior: smooth;
+  /*so scrolling to sections is
+    done slowly*/ }
+
+
+html, body {
+  font-family: 'Dosis', sans-serif;
+
+  font-size: 100%;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+
+  background: #000;
+  color: #222;
+
+  cursor: auto;
+
+  margin: 0;
+  padding: 0;
+  position: relative;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+p {
+  padding: 15px;
+}
+
+.u-center-text {
+  text-align: center !important;
+}
