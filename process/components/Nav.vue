@@ -12,11 +12,11 @@
     </div>
 
     <div class="ps-sidenav--links">
-      <ul v-for="value in strings" v-bind:key = value>
+      <ul v-for="value in filteredApts" v-bind:key = value>
         <li>
           <a href="#main-app">
             <font-awesome-icon icon="user-secret" class="icon"/>
-            <span class="menu-item">{{value}}</span>
+            <span class="menu-item">{{value.itemName}} x </span>
           </a>
         </li>
       </ul>
@@ -37,7 +37,7 @@ export default {
     } //return
   }, //data
 
-  props: ['strings', "menu"],
+  props: ['filteredApts'],
 
   components: {
     //stuff

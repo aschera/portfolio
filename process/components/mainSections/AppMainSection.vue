@@ -9,8 +9,8 @@
     <section id="story"  class="section-stories">
 
       <blog-story
-        v-for="(item, i) in appointments"
-        :appointment="item"
+        v-for="(item, i) in Items"
+        :Item="item"
         :key="i">
       </blog-story>
 
@@ -26,7 +26,7 @@ import BlogStory from './BlogStory.vue';
 
 export default {
 
-  props: ['strings','appointments'],
+  props: ['strings','Items'],
 
   name: 'AppMainSection',
   data() {
@@ -53,6 +53,7 @@ section.section-stories {
   margin-bottom: $gutter ;
 
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
   align-content: center;

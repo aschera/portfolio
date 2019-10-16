@@ -50,6 +50,7 @@ header {
     clip-path: polygon(0% 0%, 100% 0%, 100% 8%, 100% 80%, 80% 100%, 20% 100%, 0 80%, 0 8%);
 
     overflow: unset;
+    margin-left: 60px;
     transition: $transitions;
 
     @media only screen and (min-width: 1600px) {

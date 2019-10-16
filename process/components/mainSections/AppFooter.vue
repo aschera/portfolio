@@ -9,7 +9,7 @@
           <div class="col">
             <p>
               <span class="footer__text">
-                {{strings.website-author}}
+                {{strings.website_author}}
               </span>
               <em class="footer__date">
                 &copy; {{strings.year}}
@@ -26,7 +26,7 @@
 
 export default {
 
-  props: ['strings'],
+  props: ["strings"],
 
   name: 'AppFooter',
   data() {
@@ -47,6 +47,14 @@ export default {
 footer {
   margin-top: 5rem;
   border-top: 1px solid $color-red;
+
+  overflow: unset;
+  margin-left: 60px;
+  transition: $transitions;
+
+    @media only screen and (min-width: 1600px) {
+      margin-left:185px;
+    }
 
 .container {
 

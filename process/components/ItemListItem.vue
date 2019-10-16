@@ -12,9 +12,9 @@
       <div class="pet-head">
         <span class="pet-name"
           contenteditable="true"
-          ref="petName"
-          @blur="requestUpdate('petName')"
-        >{{appointment.petName}}</span>
+          ref="itemName"
+          @blur="requestUpdate('itemName')"
+        >{{Item.itemName}}</span>
         <span class="apt-date pull-right">{{this.formattedDate}}</span>
       </div><!-- pet-head -->
 
@@ -22,15 +22,15 @@
         <span class="label-item">Owner:</span>
         <span
           contenteditable="true"
-          ref="petOwner"
-          @blur="requestUpdate('petOwner')"
-        >{{appointment.petOwner}}</span>
+          ref="itemAuthor"
+          @blur="requestUpdate('itemAuthor')"
+        >{{Item.itemAuthor}}</span>
       </div>
-      <div class="apt-notes"              
+      <div class="apt-notes"
         contenteditable="true"
-        ref="aptNotes"
-        @blur="requestUpdate('aptNotes')"
-      >{{appointment.aptNotes}}</div>
+        ref="itemNotes"
+        @blur="requestUpdate('itemNotes')"
+      >{{Item.itemNotes}}</div>
 
     </div><!-- pet-info -->
 
@@ -44,16 +44,16 @@
 import moment from 'moment';
 
 export default {
-  name: 'PetAppointmentItem',
-  props: ['appointment'],
+  name: 'PetItemItem',
+  props: ['Item'],
   methods: {
 
     requestRemoval: function() {
-      this.$parent.$emit('remove', this.appointment);
+      this.$parent.$emit('remove', this.Item);
     }, //requestremoval
 
     requestUpdate: function(myRef) {
-      this.appointment[myRef] = 
+      this.Item[myRef] =
         this.$refs[myRef].innerText;
     }
 
@@ -61,7 +61,7 @@ export default {
 
   computed: {
     formattedDate: function() {
-      return moment(new Date(this.appointment.aptDate)).format('MM-DD-YY, h:mm a');
+      return moment(new Date(this.Item.itemDate)).format('MM-DD-YY, h:mm a');
     } //formattedDate
   } //computed
 } //default
@@ -93,7 +93,7 @@ export default {
     font-weight: 600;
     color: #667B82;
   }
-  
+
   .pet-delete {
     font-size: 1.2em;
   }
@@ -104,6 +104,6 @@ export default {
 
   [contenteditable]:focus {
     outline: none;
-    background: #EEE8D6; 
+    background: #EEE8D6;
   }
 </style>

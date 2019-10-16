@@ -1,10 +1,10 @@
 <template>
-  <div class="row search-appointments">
+  <div class="row search-Items">
     <div class="col-sm-offset-3 col-sm-6">
 
       <div class="input-group">
 
-        <input id="SearchApts" placeholder="Search" type="text" class="form-control" aria-label="Search Appointments"
+        <input id="SearchApts" placeholder="Search" type="text" class="form-control" aria-label="Search Items"
         v-model="searchTerm" />
 
         <div class="input-group-btn">
@@ -13,20 +13,20 @@
 
             <ul class="dropdown-menu dropdown-menu-right">
 
-              <li><a href="#" id="petName"
-                @click="requestKeyChange('petName')">Pet Name
+              <li><a href="#" id="itemName"
+                @click="requestKeyChange('itemName')">Pet Name
               <span class="glyphicon glyphicon-ok"
-                v-if="myKey==='petName'"></span></a></li>
+                v-if="myKey==='itemName'"></span></a></li>
 
-              <li><a href="#" id="aptDate"
-                @click="requestKeyChange('aptDate')">Date
+              <li><a href="#" id="itemDate"
+                @click="requestKeyChange('itemDate')">Date
                 <span class="glyphicon glyphicon-ok"
-                v-if="myKey==='aptDate'"></span></a></li>
+                v-if="myKey==='itemDate'"></span></a></li>
 
               <li><a href="#" id="ownerName"
-                @click="requestKeyChange('petOwner')">Owner
+                @click="requestKeyChange('itemAuthor')">Owner
                 <span class="glyphicon glyphicon-ok"
-                v-if="myKey==='petOwner'"></span></a></li>
+                v-if="myKey==='itemAuthor'"></span></a></li>
 
               <li role="separator" class="divider"></li>
 
@@ -40,16 +40,16 @@
                 <span class="glyphicon glyphicon-ok"
                   v-if="myDir==='desc'"></span></a></li>
             </ul>
-        </div><!-- input-group-btn --> 
-      </div><!-- input-group --> 
-    </div><!-- col-sm-offset-3 --> 
-  </div><!-- search-appointments -->
+        </div><!-- input-group-btn -->
+      </div><!-- input-group -->
+    </div><!-- col-sm-offset-3 -->
+  </div><!-- search-Items -->
 </template>
 
 <script>
 export default {
 
-  name: 'SearchAppointments',
+  name: 'SearchItems',
   data() {
     return {
       searchTerm: ''

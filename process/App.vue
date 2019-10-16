@@ -16,25 +16,25 @@
 
             <div class="col menu">
 
-              <nav-menu :strings= "strings.menu" :menu = "menu"></nav-menu>
+              <nav-menu :Items = 'filteredApts'></nav-menu>
 
             </div><!-- col-sm-16 -->
 
             <div class="col content">
               <app-main-section
-                :appointments = 'filteredApts'>
+                :Items = 'filteredApts'>
               </app-main-section>
               <!--
-              <add-appointment
-                @addRecord="addAppointment" />
-              <search-appointments
+              <add-Item
+                @addRecord="addItem" />
+              <search-Items
                 :myKey = "filterKey"
                 :myDir = "filterDir"
-                @searchRecords='searchAppointments'
+                @searchRecords='searchItems'
                 @keyChange = "changeKey"
                 @dirChange = "changeDir" />
-              <appointment-list
-                :appointments = 'filteredApts'
+              <Item-list
+                :Items = 'filteredApts'
                 @remove = 'removeItem' />
                 -->
             </div><!-- col-sm-6 -->
@@ -64,9 +64,9 @@ import moment from 'moment';
 import AppHeader from './components/mainSections/AppHeader.vue';
 import Nav from './components/Nav.vue';
 import AppMainSection from './components/mainSections/AppMainSection.vue';
-import AddAppointment from './components/AddAppointment.vue';
-import SearchAppointments from './components/SearchAppointments.vue';
-import AppointmentList from './components/AppointmentList.vue';
+import AddItem from './components/AddItem.vue';
+import SearchItems from './components/SearchItems.vue';
+import ItemList from './components/ItemList.vue';
 import AppFooter from './components/mainSections/AppFooter.vue';
 
 export default {
@@ -80,10 +80,10 @@ export default {
 
   data() {
     return {
-      theAppointments: [],
+      theItems: [],
       strings: {},
       searchTerms: '',
-      filterKey: 'petName',
+      filterKey: 'itemName',
       filterDir: 'asc'
     } //return
   }, //data
@@ -91,17 +91,17 @@ export default {
   components: {
     'app-header': AppHeader,
     'nav-menu': Nav,
-    'add-appointment': AddAppointment,
-    'search-appointments': SearchAppointments,
+    'add-Item': AddItem,
+    'search-Items': SearchItems,
     'app-main-section': AppMainSection,
-    'appointment-list': AppointmentList,
+    'Item-list': ItemList,
     'app-footer': AppFooter,
   }, //components
 
   created: function() {
-    $.getJSON('./builds/appointments.json')
+    $.getJSON('./builds/Items.json')
       .done( info =>  {
-        this.theAppointments = info;
+        this.theItems = info;
     }); //getJSON
         $.getJSON('./builds/strings.json')
       .done( s =>  {
@@ -112,17 +112,17 @@ export default {
 
   methods: {
 
-    addAppointment: function(apt) {
-      this.theAppointments.push(apt);
-    }, //addAppointment
+    addItem: function(apt) {
+      this.theItems.push(apt);
+    }, //addItem
 
     removeItem: function(apt) {
-      this.theAppointments = _.without(this.theAppointments, apt)
+      this.theItems = _.without(this.theItems, apt)
     }, //removeItem
 
-    searchAppointments: function(terms) {
+    searchItems: function(terms) {
       this.searchTerms = terms;
-    }, //searchAppointments
+    }, //searchItems
 
     changeKey: function(value) {
       this.filterKey = value;
@@ -136,11 +136,11 @@ export default {
 
   computed: {
     searchedApts: function() {
-      return this.theAppointments.filter(function(item) {
+      return this.theItems.filter(function(item) {
         return (
-          (item.petName.toLowerCase().match(this.searchTerms.toLowerCase())) ||
-          (item.petOwner.toLowerCase().match(this.searchTerms.toLowerCase())) ||
-          (item.aptNotes.toLowerCase().match(this.searchTerms.toLowerCase()))
+          (item.itemName.toLowerCase().match(this.searchTerms.toLowerCase())) ||
+          (item.itemAuthor.toLowerCase().match(this.searchTerms.toLowerCase())) ||
+          (item.itemNotes.toLowerCase().match(this.searchTerms.toLowerCase()))
         )
       }.bind(this));
     }, //searchedApts
@@ -161,7 +161,6 @@ export default {
 @import "./assets/_variables.scss";
 
 .main {
-    background-image: linear-gradient(to bottom, rgba(62,147,154,0), $color-purple );
     margin: 0 auto;
     color: $color-white;
 

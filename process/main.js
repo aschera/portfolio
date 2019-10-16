@@ -1,5 +1,5 @@
 import './assets/style.css';
-import './assets/appointments.json';
+import './assets/Items.json';
 import './assets/strings.json';
 
 import Vue from 'vue';

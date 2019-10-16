@@ -9,34 +9,20 @@
             <div class="tile__image tile__image--cropped">
                 <img
                 alt="image"
-                style="
-                width: 100%;
-                display: block;
-                position: absolute;
-                bottom: 0px;
-                left: 0px;
-                right: 0px;
-                top: 0px;
-                overflow: hidden;
-                transition: opacity 0.6s ease-out;"
-                :src=appointment.aptImage>
+                :src=Item.itemImage>
             </div>
 
             <h3 class="heading-tertiary u-margin-bottom-small">
-                owner: {{appointment.petOwner}}
+                owner: {{Item.itemAuthor}}
             </h3>
 
-            <transition name="fade">
-                <p v-if="show">Toggle this</p>
-            </transition>
-
             <p>
-               {{this.formattedDate}} <br>
-               {{appointment.aptNotes}}
+               {{Item.itemDate}} <br>
+               {{Item.itemNotes}}
             </p>
 
             <a href="#popup" class="btn-text">
-                {{appointment.link}}
+                {{Item.link}}
             </a>
 
         </div>
@@ -49,7 +35,7 @@
 
 export default {
 
-  props: ['strings','appointment'],
+  props: ['strings','Item'],
 
   name: 'BlogStory',
   data() {
@@ -72,19 +58,19 @@ export default {
 // main wrapper
 .story {
     position: relative;
-    margin: 0 0 2em 0;
+    margin: 0.5em;
     padding: $gutter ;
-
+    border-radius: 4%;
     width: 100%;
-    max-width: calc((100% - 48px) / 3);
-    height: 430px;
+    min-width: 200px;
+    max-width: 28%;
+    height: 100%;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex: 1;
 
-    background-color: $color-black;
+    background-color: $color-pink;
     color: $color-grey;
 
 
@@ -117,8 +103,8 @@ export default {
     overflow: hidden;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    outline: 1px solid $color-grey;
-    border: 1px solid $color-grey;
+    outline: 0.1em solid $color-grey;
+    border: 0.1em solid $color-grey;
     z-index: 0;
     transition: transform 0.5s cubic-bezier(0.4, 0, 0, 1);
 
@@ -130,6 +116,15 @@ export default {
     img {
         width: 100%;
         display: block;
+        width: 100%;
+        display: block;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        overflow: hidden;
+        transition: opacity 0.6s ease-out;
     }
 }
 
