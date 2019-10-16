@@ -41,12 +41,21 @@ export default {
 
 header {
     height: 15vh;
+    margin-left: 60px;
     background-image: url('../../assets/headerBg.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 8%, 100% 80%, 80% 100%, 20% 100%, 0 80%, 0 8%);
     clip-path: polygon(0% 0%, 100% 0%, 100% 8%, 100% 80%, 80% 100%, 20% 100%, 0 80%, 0 8%);
+
+    overflow: unset;
+    transition: $transitions;
+
+    @media only screen and (min-width: 1600px) {
+      margin-left:185px;
+    }
+
 
   // main wrapper
   nav.navbar-default {
@@ -79,4 +88,3 @@ header {
 } // end header element
 
 </style>
- 

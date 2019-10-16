@@ -47,20 +47,10 @@ export default {
 
 @import "../../assets/_variables.scss";
 
-// main wrapper
-
-
-@media (max-width: 56.25em) {
-  #story > div:nth-child(3),
-  #story > div.row.u-margin-bottom-big {
-    padding: 0;
-  }
-}
-
 section.section-stories {
   position: relative;
   flex-direction: row;
-  margin-bottom: 24px;
+  margin-bottom: $gutter ;
 
   display: flex;
   justify-content: flex-start;
@@ -72,9 +62,9 @@ section.section-stories {
     }
 }
 
-      h2 {
-        color: $color-grey;
-        text-align: center;
-      }
+h2 {
+  color: $color-grey;
+  text-align: center;
+}
 
 </style>

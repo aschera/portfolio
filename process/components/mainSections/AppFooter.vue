@@ -4,9 +4,9 @@
 <template>
 
     <footer>
-      <div class="content container-fluid">
+      <div class="content container">
         <div class="row">
-          <div class="col-sm-6">
+          <div class="col">
             <p>
               <span class="footer__text">
                 {{strings.website-author}}
@@ -15,7 +15,7 @@
                 &copy; {{strings.year}}
               </em>
             </p>
-          </div><!-- col-sm-6 -->
+          </div><!-- col -->
         </div><!-- row -->
       </div><!-- content container -->
     </footer><!-- footer -->
@@ -48,20 +48,20 @@ footer {
   margin-top: 5rem;
   border-top: 1px solid $color-red;
 
-.container-fluid {
+.container {
 
   .row {
 
-    div.col-sm-6 {
+    div.col {
       .footer__text {
         padding: 0 1rem;
         color: $color-red;
-        text-transform: uppercase; 
+        text-transform: uppercase;
         }
       .footer__date {
         color: $color-red;
         font-family: 'Open Sans', sans-serif;
-        font-size: 1.6rem; 
+        font-size: 1.6rem;
         }
       }
     }

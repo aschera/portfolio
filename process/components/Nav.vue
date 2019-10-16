@@ -74,7 +74,7 @@ export default {
     //overflow: hidden;
       transition: $transitions;
     z-index: 9999;
-}
+} // end ps-sidenav class
 
 .ps-sidenav--links {
   position: relative;
@@ -82,55 +82,60 @@ export default {
   left: 0;
   height: calc(100vh - 62px);
   width: 100%;
-}
 
-.ps-sidenav--links  ul  {margin-left: 0;}
+  ul  {
+    margin-left: 0;
 
-.ps-sidenav--links  ul li {
-  margin-bottom: 0;
-  padding-left: 0;
-  font-weight: 500;
-  font-size: 85.5%;
-}
+    li {
+      margin-bottom: 0;
+      padding-left: 0;
+      font-weight: 500;
+      font-size: 85.5%;
 
-.ps-sidenav--links  ul li a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height:  3em;
-  padding: 0 0.4em;
-  transition: $transitions;
-  color: $color-white;
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height:  3em;
+        padding: 0 0.4em;
+        transition: $transitions;
+        color: $color-white;
 
-  .icon {
-    &.svg-inline--fa {
-      height: 2em;
-      width: 2em;
+        .icon {
+          &.svg-inline--fa {
+            height: 2em;
+            width: 2em;
+          }
+        }
+        .menu-item {
+          display: none;
+        }
+
+        & span {
+          padding: 0 0 0 0.5em;
+          width: 100%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          transition: $transitions;
+        }
+
+        &:hover,
+        &:focus {
+          background: $color-brown;
+          color: $color-white;
+          text-decoration: none;
+        }
+
+        &:hover .icon---1he1r path {
+          fill: $color-white;
+        }
+      }
     }
   }
-  .menu-item {
-    display: none;
-  }
 
-  & span {
-    padding: 0 0 0 0.5em;
-    width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    transition: $transitions;
-  }
-}
+}// end .ps-sidenav--links class
 
-.ps-sidenav--links  ul li a:hover, .ps-sidenav--links  ul li a:focus {
-  background: $color-brown;
-  color: $color-white;
-  text-decoration: none;
-}
-
-.ps-sidenav--links  ul li a:hover .icon---1he1r path {
-  fill: $color-white;
-}
 
 .ps-sidenav--links ul li:before {display: none;}
 .ps-sidenav--links ul li.links-upgrade {position: relative;}
@@ -156,18 +161,21 @@ export default {
   align-items: center;
   justify-content: center;
   position: relative;
-}
 
-.ps-sidenav--logo a {
-  height: 100%;
-  margin: 0 18px;
-  text-decoration: none;
-  outline: none;
-  display: flex;
-  align-items: center;
-}
+  a {
+    height: 100%;
+    margin: 0 18px;
+    text-decoration: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+  }
 
-.ps-sidenav--logo span:nth-of-type(1) {width: 24px;}
+} // end .ps-sidenav--logo class
+
+
+
+.ps-sidenav--logo span:nth-of-type(1) {width: $gutter ;}
 .ps-sidenav--logo span:nth-of-type(2) {width: 129px; margin-left: 18px;}
 
 .ps-sidenav--links .ps-sidenav__upgrade {
@@ -188,7 +196,7 @@ export default {
   transform: translateX(0);
 }
 
-.ps-sidenav.sidenav-expanded {width: 185px; overflow: unset;}
+.ps-sidenav.sidenav-expanded {width: 185px; overflow: unset; transition: $transitions;}
 
 .ps-sidenav.sidenav-expanded {
   box-shadow: 50px 0 100px rgba(0,0,0,0.8);}
@@ -202,6 +210,12 @@ export default {
   opacity: 100;}
 
 .body--overlay-active .ps-sidenav {z-index: 1;}
+
+
+
+
+
+
 
 @media only screen and (max-width: 629px) {
   .ps-sidenav,

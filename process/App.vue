@@ -161,31 +161,38 @@ export default {
 @import "./assets/_variables.scss";
 
 .main {
-    background-image: linear-gradient(to bottom, rgba(62,147,154,0), #5b3f4e);
+    background-image: linear-gradient(to bottom, rgba(62,147,154,0), $color-purple );
     margin: 0 auto;
-    color: white;
+    color: $color-white;
 
   .container {
     margin: 0;
     padding: 0;
     width: 100%;
   }
+
   .col {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     align-content: center;
-    padding: 24px;
+    padding: $gutter ;
     height: inherit;
     position: relative;
-  }
+    transition: $transitions;
 
-  .col.menu {
-    // stuff
-  }
-  .col.content {
-    width: calc(100% - 60px);
+      @media only screen and (min-width: 1600px) {
+        margin-left: 70px;
+      }
+
+    .menu {
+      // stuff
+    }
+
+    .content {
+      width: calc(100% - 60px);
+    }
   }
 
   .flex {
