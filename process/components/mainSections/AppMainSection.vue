@@ -54,11 +54,13 @@ export default {
 
 section.section-stories {
   position: relative;
-  display: flex;
   flex-direction: row;
   margin-bottom: 24px;
-  justify-content: flex-end;
-  align-items: flex-start;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
 
     @media (max-width: 1160px){
       display: block;

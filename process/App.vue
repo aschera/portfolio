@@ -14,13 +14,13 @@
 
           <div class="row flex">
 
-            <div class="col col-sm-6 menu">
+            <div class="col menu">
 
               <nav-menu :strings= "strings.menu" :menu = "menu"></nav-menu>
 
             </div><!-- col-sm-16 -->
 
-            <div class="col col-sm-6 content">
+            <div class="col content">
               <app-main-section
                 :appointments = 'filteredApts'>
               </app-main-section>
@@ -176,7 +176,7 @@ export default {
     justify-content: center;
     align-items: center;
     align-content: center;
-    padding: 24px 24px 24px 8px;
+    padding: 24px;
     width: calc(50% - 60px);
     height: inherit;
     position: relative;
