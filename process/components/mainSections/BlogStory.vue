@@ -8,6 +8,7 @@
         <div class="story__text">
             <div class="tile__image tile__image--cropped">
                 <img
+                alt="image"
                 style="
                 width: 100%;
                 display: block;
@@ -100,7 +101,6 @@ export default {
         overflow: hidden;
         position: relative;
         line-height: $line-height;
-        text-align: justify;
 
         @media (max-width: 56.25em) {
             font-size: 1.5rem;

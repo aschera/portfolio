@@ -2,16 +2,21 @@
 <!-- // -------------------------------------- App Main Section Component -------------------------------------- // -->
 
 <template>
+  <div>
 
-  <section id="story"  class="section-stories">
+    <h2>h2 title</h2> <!-- TODO: dont skip headings-->
 
-    <blog-story
-      v-for="(item, i) in appointments"
-      :appointment="item"
-      :key="i">
-    </blog-story>
+    <section id="story"  class="section-stories">
 
-  </section>
+      <blog-story
+        v-for="(item, i) in appointments"
+        :appointment="item"
+        :key="i">
+      </blog-story>
+
+    </section>
+
+  </div>
 
 </template>
 
@@ -66,5 +71,10 @@ section.section-stories {
       display: block;
     }
 }
+
+      h2 {
+        color: $color-grey;
+        text-align: center;
+      }
 
 </style>

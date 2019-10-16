@@ -177,16 +177,15 @@ export default {
     align-items: center;
     align-content: center;
     padding: 24px;
-    width: calc(50% - 60px);
     height: inherit;
     position: relative;
   }
 
   .col.menu {
-    width: calc(20% - 60px);
+    // stuff
   }
   .col.content {
-    width: calc(80% - 60px);
+    width: calc(100% - 60px);
   }
 
   .flex {

@@ -6,7 +6,7 @@
   <div class="ps-sidenav" id="mainSideNav" role="navigation">
 
     <div class="ps-sidenav--logo">
-      <a href="#">
+      <a href="http://google.com"> <!-- TODO : add correct link or remove-->
         <font-awesome-icon icon="user-secret" />
       </a>
     </div>
