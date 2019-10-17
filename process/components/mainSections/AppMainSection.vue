@@ -50,17 +50,14 @@ export default {
 section.section-stories {
   position: relative;
   flex-direction: row;
-  margin-bottom: $gutter ;
+  margin-bottom: $gutter;
+  margin-left: $menu-width;
 
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
   align-content: center;
-
-    @media (max-width: 1160px){
-      display: block;
-    }
 }
 
 h2 {

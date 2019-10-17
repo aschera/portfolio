@@ -18,7 +18,7 @@
 
               <nav-menu :Items = 'filteredApts'></nav-menu>
 
-            </div><!-- col-sm-16 -->
+            </div><!-- col -->
 
             <div class="col content">
               <app-main-section
@@ -37,7 +37,7 @@
                 :Items = 'filteredApts'
                 @remove = 'removeItem' />
                 -->
-            </div><!-- col-sm-6 -->
+            </div><!-- col -->
 
           </div><!-- row -->
         </div><!-- container -->
@@ -185,12 +185,12 @@ export default {
         margin-left: 70px;
       }
 
-    .menu {
-      // stuff
+    &.menu {
+      width: auto;
     }
 
-    .content {
-      width: calc(100% - 60px);
+    &.content {
+      width: calc(100% - $menu-width);
     }
   }
 

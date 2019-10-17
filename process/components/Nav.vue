@@ -14,9 +14,11 @@
     <div class="ps-sidenav--links">
       <ul v-for="value in filteredApts" v-bind:key = value>
         <li>
-          <a href="#main-app">
+          <a :href="value.url">
             <font-awesome-icon icon="user-secret" class="icon"/>
-            <span class="menu-item">{{value.itemName}} x </span>
+            <span class="menu-item">
+              {{value.name}}
+            </span>
           </a>
         </li>
       </ul>
@@ -33,11 +35,20 @@ export default {
 
   data() {
     return {
-      // stuff
+      filteredApts : [{
+        name: 'name1',
+        url: 'url1'
+      },{
+        name: 'name2',
+        url: 'url2'
+      },{
+        name: 'name3',
+        url: 'url3'
+      }]
     } //return
   }, //data
 
-  props: ['filteredApts'],
+  props: [],
 
   components: {
     //stuff
@@ -71,9 +82,14 @@ export default {
     z-index: 960;
     background-color: $color-black;
     color: $color-white;
-    //overflow: hidden;
       transition: $transitions;
     z-index: 9999;
+
+    &:hover .ps-sidenav--logo span:nth-of-type(2) {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
 } // end ps-sidenav class
 
 .ps-sidenav--links {
@@ -92,6 +108,10 @@ export default {
       font-weight: 500;
       font-size: 85.5%;
 
+      &:before {
+        display: none;
+      }
+
       a {
         display: flex;
         align-items: center;
@@ -101,18 +121,31 @@ export default {
         transition: $transitions;
         color: $color-white;
 
+        // the icon on every menu item
         .icon {
+           display: block;
+
           &.svg-inline--fa {
-            height: 2em;
-            width: 2em;
+            height: 1em;
+            width: 1em;
+          }
+
+          @media only screen and (min-width: 1600px) {
+            display: none;
           }
         }
+
+        // the text on the menu items.
         .menu-item {
           display: none;
+
+          @media only screen and (min-width: 1600px) {
+            display: block;
+          }
         }
 
         & span {
-          padding: 0 0 0 0.5em;
+          padding: 0 0 0 $gutter ;
           width: 100%;
           white-space: nowrap;
           overflow: hidden;
@@ -131,30 +164,14 @@ export default {
           fill: $color-white;
         }
       }
+
     }
   }
 
 }// end .ps-sidenav--links class
 
-
-.ps-sidenav--links ul li:before {display: none;}
-.ps-sidenav--links ul li.links-upgrade {position: relative;}
-.ps-sidenav--links ul li.links-upgrade > a,
-.ps-sidenav--links  ul li.links-upgrade > a:hover,
-.ps-sidenav--links  ul li.links-upgrade > a:focus {
-  color: $color-brown;
-}
-
-.ps-sidenav--links  ul li.links-upgrade > a:hover .icon---1he1r path {
-  fill:$color-brown;
-}
-
-.ps-sidenav--links  ul li.links-upgrade > a .icon---1he1r path {
-  fill: $color-brown;
-}
-
 .ps-sidenav--logo {
-  width: 60px;
+  width: $menu-width;
   height: 62px;
   border-bottom: 1px solid $color-black;
   display: flex;
@@ -169,73 +186,31 @@ export default {
     outline: none;
     display: flex;
     align-items: center;
+
+
+  }
+
+  span:nth-of-type(1) {
+    width: $gutter;
+  }
+  span:nth-of-type(2) {
+    width: 129px;
+    margin-left: 18px;
   }
 
 } // end .ps-sidenav--logo class
-
-
-
-.ps-sidenav--logo span:nth-of-type(1) {width: $gutter ;}
-.ps-sidenav--logo span:nth-of-type(2) {width: 129px; margin-left: 18px;}
-
-.ps-sidenav--links .ps-sidenav__upgrade {
-  opacity: 0;
-  transition: $transitions;
-  }
-.ps-sidenav--links .ps-sidenav__upgrade > div {
-   font-size: 12px;
-   color: $color-white;
-   text-align: left;
-   line-height: 18px;
-   padding: 0 15px;
-   margin-bottom: 20px;
-}
-
-.ps-sidenav:hover .ps-sidenav--logo span:nth-of-type(2) {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.ps-sidenav.sidenav-expanded {width: 185px; overflow: unset; transition: $transitions;}
-
-.ps-sidenav.sidenav-expanded {
-  box-shadow: 50px 0 100px rgba(0,0,0,0.8);}
-
-.ps-sidenav.sidenav-expanded .ps-sidenav--logo {width: 185px;}
-
-.ps-sidenav.sidenav-expanded .ps-sidenav--links .popover__image {
-  display: block;}
-
-.ps-sidenav.sidenav-expanded .ps-sidenav--links .ps-sidenav__upgrade {
-  opacity: 100;}
-
-.body--overlay-active .ps-sidenav {z-index: 1;}
-
-
-
-
-
-
 
 @media only screen and (max-width: 629px) {
   .ps-sidenav,
   .ps-sidenav--links ul {
     overflow: hidden;
   }
-
-  .ps-sidenav--links .ps-sidenav__upgrade {
-    opacity: 100;
-  }
-
-  .ps-sidenav.sidenav-expanded .ps-sidenav--links ul {
-    overflow: unset;
-  }
 }
 
 @media only screen and (min-width: 630px) {
   .ps-sidenav {
     transition:$transitions;
-    width: 60px;
+    width: $menu-width;
     overflow: hidden;
   }
 }
@@ -259,14 +234,6 @@ export default {
 
   .ps-sidenav--logo {
     width:185px;
-  }
-
-  .ps-sidenav--links .ps-sidenav__upgrade {
-    opacity: 100;
-  }
-
-  .ps-sidenav.sidenav-expanded {
-    box-shadow: none;
   }
 
   .ps-sidenav--links  ul li {

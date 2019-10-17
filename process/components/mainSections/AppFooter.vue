@@ -49,11 +49,11 @@ footer {
   border-top: 1px solid $color-red;
 
   overflow: unset;
-  margin-left: 60px;
+  margin-left: $menu-width;
   transition: $transitions;
 
     @media only screen and (min-width: 1600px) {
-      margin-left:185px;
+      margin-left: 185px;
     }
 
 .container {

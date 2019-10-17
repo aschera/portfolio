@@ -58,11 +58,10 @@ export default {
 // main wrapper
 .story {
     position: relative;
-    margin: 0.5em;
+    margin: $gutter;
     padding: $gutter ;
     border-radius: 4%;
     width: 100%;
-    min-width: 200px;
     max-width: 28%;
     height: 100%;
 
@@ -76,14 +75,14 @@ export default {
 
       @media (max-width: 1160px){
             flex: none;
-            margin: 0 0 $gutter  0 !important;
+            margin: $gutter ;
             max-width: none;
             width: auto;
             height: 100%;
       }
 
     & p {
-        color: #fff;
+        color: $color-white;
         overflow: hidden;
         position: relative;
         line-height: $line-height;

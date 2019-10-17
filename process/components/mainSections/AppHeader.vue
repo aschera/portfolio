@@ -41,7 +41,7 @@ export default {
 
 header {
     height: 15vh;
-    margin-left: 60px;
+    margin-left: $menu-width;
     background-image: url('../../assets/headerBg.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -50,7 +50,7 @@ header {
     clip-path: polygon(0% 0%, 100% 0%, 100% 8%, 100% 80%, 80% 100%, 20% 100%, 0 80%, 0 8%);
 
     overflow: unset;
-    margin-left: 60px;
+    margin-left: $menu-width;
     transition: $transitions;
 
     @media only screen and (min-width: 1600px) {
