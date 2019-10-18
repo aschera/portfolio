@@ -11,3 +11,24 @@ in App.vue
 #3
 Add stuff to the template of the new component !
 done :)
+
+
+---
+
+#How to Deploy to Github-Pages with a Master Branch and Docs folder:
+
+On your master branch, run the terminal command: `npm run build`.
+
+Change the name of your `dist` folder to `docs`
+
+In your newly created `docs` folder, go to the index.html and remove the `/` in the beginning of every script and link tag’s `src` attribute.
+
+Go to your repository’s settings.
+
+Scroll to the Github Pages settings.
+
+Change your `Source` in your Github Pages settings from `gh-pages branch` to `master branch/docs folder`.
+
+Now, you can push your master branch to github, and it will be hosted by Github Pages.
+
+If you want to make a change to your master branch and have it detected by Github Pages, you’ll need to delete your docs folder, and follow the instructions from step 1.

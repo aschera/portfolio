@@ -1,0 +1,13 @@
+{
+    "header": "Mistress of the Dark Arts",
+    "website_author": "Christina Bögh",
+    "year": "2019",
+    "copy": "All contents &copy; 2019",
+    "rights": ". All rights reserved.",
+    "webaddress": "website.com",
+    "terms": "Terms of use",
+    "privacy": "Privacy policy",
+    "terms_url": "#",
+    "privacy_url": "#",
+    "test": [{"text": "Home"},{"text":"Home2"},{"text":"Home3"}]
+}
