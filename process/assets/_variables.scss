@@ -15,13 +15,21 @@ $color-white        : #FFF6F6;
 //sizes
 $header-height      : 100px;
 $footer-height      : $header-height;
-
 $line-height        : 1em;
-
 $gutter             : 0.5em;
-
 $menu-width         : 60px;
+
+
+//canvas menu
+$positionLarge      : 140px;
+$positionMedium     : 100px;
+$positionSmall      : 60px;
+
 
 
 // mix
 $transitions: all .15s ease-in-out;
+
+
+
+

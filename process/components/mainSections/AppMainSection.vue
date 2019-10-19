@@ -12,9 +12,12 @@
           Your browser does not support the HTML5 canvas tag.
       </canvas>
 
-      <div class="rotateS electron"></div>
-      <div class="rotateM electron"></div>
-      <div class="rotateL electron"></div>
+      <ul class="personal-menu">
+        <li class="rotateS electron"></li>
+        <li class="rotateM electron"></li>
+        <li class="rotateL electron"></li>
+      </ul>
+
 
     </section>
 
@@ -122,53 +125,63 @@ h2 {
   text-align: center;
 }
 
-
-
-
 /* --------------------------------------------------- */
-
+/* Chrome, Safari, Opera */
 /* small */
 @-webkit-keyframes circleS {
-    from {-webkit-transform: rotateZ(0deg) translateX(60px)}
-    to {-webkit-transform: rotateZ(-360deg) translateX(60px)}
+    from {-webkit-transform: rotateZ(0deg) translateX($positionSmall)}
+    to {-webkit-transform: rotateZ(-360deg) translateX($positionSmall)}
 }
-
 /* middle */
 @-webkit-keyframes circleM {
-    from {-webkit-transform: rotateZ(0deg) translateX(100px)}
-    to {-webkit-transform: rotateZ(-360deg) translateX(100px)}
+    from {-webkit-transform: rotateZ(0deg) translateX($positionMedium)}
+    to {-webkit-transform: rotateZ(-360deg) translateX($positionMedium)}
 }
-
 /* large  */
 @-webkit-keyframes circleL {
-    from {-webkit-transform: rotateZ(0deg) translateX(140px)}
-    to {-webkit-transform: rotateZ(-360deg) translateX(140px)}
+    from {-webkit-transform: rotateZ(0deg) translateX($positionLarge)}
+    to {-webkit-transform: rotateZ(-360deg) translateX($positionLarge)}
 }
 
-
-@-webkit-keyframes ccircle {
-    from {-webkit-transform: rotateZ(-360deg) translateX(100px)}
-    to {-webkit-transform: rotateZ(0deg) translateX(100px)}
+/* --------------------------------------------------- */
+/* Standard syntax */
+/* small */
+@keyframes circleS {
+    from {-webkit-transform: rotateZ(0deg) translateX($positionSmall)}
+    to {-webkit-transform: rotateZ(-360deg) translateX($positionSmall)}
 }
-
+/* middle */
+@keyframes circleM {
+    from {-webkit-transform: rotateZ(0deg) translateX($positionMedium)}
+    to {-webkit-transform: rotateZ(-360deg) translateX($positionMedium)}
+}
+/* large  */
+@keyframes circleL {
+    from {-webkit-transform: rotateZ(0deg) translateX($positionLarge)}
+    to {-webkit-transform: rotateZ(-360deg) translateX($positionLarge)}
+}
+/* --------------------------------------------------- */
 
 .rotateS {
-  -webkit-animation: circleS 8s infinite linear;
+  animation         : circleS 16s infinite linear;
+  -webkit-animation : circleS 16s infinite linear;
 }
 
 .rotateM {
-  -webkit-animation: circleM 10s infinite linear;
+  animation         : circleM 20s infinite linear;
+  -webkit-animation : circleM 20s infinite linear;
 }
 
 .rotateL {
-  -webkit-animation: circleL 12s infinite linear;
+  animation         : circleL 24s infinite linear;
+  -webkit-animation : circleL 24s infinite linear;
 }
 
 .electron {
-  background-color: #A08993;
-  color: white;
+  background-color: $color-lightpink;
+  color: $color-white ;
   position: absolute;
-  top: 140px;
+  top: $positionLarge;
   left: 185px;
   width: 20px;
   height: 20px;
@@ -194,13 +207,44 @@ canvas {
   position: relative;
 }
 
+ul.personal-menu {
 
+  li {
+    cursor: pointer;
 
+    &.rotateS {
+      &:hover {
+          background-color: blue;
 
+        &:before {
+          content: "xx";
+        }
+      }
+    }
 
+    &.rotateM {
+      &:hover {
+          background-color: blue;
 
+        &:before {
+          content: "yy ";
+        }
+      }
+    }
 
+    &.rotateL {
+      &:hover {
+          background-color: blue;
 
+        &:before {
+          content: "zz";
+        }
 
+      }
+    }
+
+  }
+
+}
 
 </style>
