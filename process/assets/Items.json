@@ -1,11 +1,11 @@
 [
   {
-    "itemName": "Name",
-    "itemAuthor": "author name",
+    "itemName": "Khan Academy",
+    "itemAuthor": "aschera",
     "itemDate": "2017-07-24 08:30",
-    "itemNotes": "text",
-    "itemImage": "image url",
-    "link": "link url"
+    "itemNotes": "My Khan Academy profile",
+    "itemImage": "https://cdn.kastatic.org/images/avatars/svg/orange-juice-squid.svg",
+    "link": "https://www.khanacademy.org/profile/aschera/"
   },
     {
     "itemName": "Name",

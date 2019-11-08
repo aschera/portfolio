@@ -71,7 +71,6 @@ import AppFooter from './components/mainSections/AppFooter.vue';
 
 export default {
   name: 'MainApp',
-
   menu:[
         {"text":"Home", "url": "#main-app"},
         {"text":"Home1", "url": "#main-app"},

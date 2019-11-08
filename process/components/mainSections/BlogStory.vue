@@ -114,14 +114,10 @@ export default {
 
     img {
         width: 100%;
+        height: 100%;
         display: block;
-        width: 100%;
-        display: block;
-        position: absolute;
         bottom: 0px;
         left: 0px;
-        right: 0px;
-        top: 0px;
         overflow: hidden;
         transition: opacity 0.6s ease-out;
     }
