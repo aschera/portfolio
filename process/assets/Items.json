@@ -8,19 +8,19 @@
     "link": "https://www.khanacademy.org/profile/aschera/"
   },
     {
-    "itemName": "Name",
-    "itemAuthor": "author name",
+    "itemName": "Facebook",
+    "itemAuthor": "Christina Bøgh",
     "itemDate": "2017-07-24 08:30",
-    "itemNotes": "text",
-    "itemImage": "image url",
-    "link": "link url"
+    "itemNotes": "My Facebook profile",
+    "itemImage": "https://scontent-arn2-2.xx.fbcdn.net/v/t1.0-9/33236789_10155370500901825_3767912845287620608_n.jpg?_nc_cat=100&_nc_ohc=ngSY4R0UI6cAQnpCyj-FoBZ8Fj1Yu14ms17YOkgahRucGvlz0DttrrDNA&_nc_ht=scontent-arn2-2.xx&oh=9a5c68fbdc80c581238bb10e93221646&oe=5E71A26D",
+    "link": "https://www.facebook.com/christina.bogh"
   },
     {
-    "itemName": "Name",
-    "itemAuthor": "author name",
+    "itemName": "LinkedIn",
+    "itemAuthor": "Christina Bögh",
     "itemDate": "2017-07-24 08:30",
-    "itemNotes": "text",
-    "itemImage": "image url",
-    "link": "link url"
+    "itemNotes": "My LinkedIn profile",
+    "itemImage": "https://media.licdn.com/dms/image/C4D03AQGW9uuVofyF6A/profile-displayphoto-shrink_200_200/0?e=1580947200&v=beta&t=O_8aoRbCcLHXKHCHiCcMB1JIgfrPHigXiuJsCcKdti4",
+    "link": "https://www.linkedin.com/in/christina-boegh/"
   }
 ]

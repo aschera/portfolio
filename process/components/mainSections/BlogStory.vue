@@ -113,11 +113,11 @@ export default {
     }
 
     img {
-        width: 100%;
+        width: 100%; */
         height: 100%;
         display: block;
-        bottom: 0px;
-        left: 0px;
+        min-width: 60%;
+        margin: 0 20%;
         overflow: hidden;
         transition: opacity 0.6s ease-out;
     }
