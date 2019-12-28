@@ -21,9 +21,11 @@
             </div><!-- col -->
 
             <div class="col content">
+
               <app-main-section
                 :Items = 'filteredApts'>
               </app-main-section>
+
               <!--
               <add-Item
                 @addRecord="addItem" />
@@ -189,7 +191,7 @@ export default {
     }
 
     &.content {
-      width: calc(100% - $menu-width);
+      width: 100%;
     }
   }
 
