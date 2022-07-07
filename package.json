@@ -16,7 +16,7 @@
     "bootstrap": "^3.4.1",
     "jquery": "^3.4.1",
     "lodash": "^4.17.15",
-    "moment": "^2.19.3",
+    "moment": "^2.29.4",
     "scss-loader": "0.0.1",
     "vue": "^2.3.3",
     "vue-fontawesome": "0.0.2",
